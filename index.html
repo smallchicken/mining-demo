@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>集能量，挖矿demo</title>
+  <link rel="stylesheet" href="index.css">
+  <script type="text/javascript" src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <audio id="myaudio" class="hide" src="2.mp3"></audio>
+    <div class="container">
+      <!-- 显示算力区域 -->
+      <div class="text-center">
+        <div class="force">
+          <span>当前挖矿算力 +{{count}}</span>
+          <i class="coin"></i>
+        </div>
+      </div>
+      <div id="content" class="content">
+        <div class="inline-block" v-for="(item,index) in getList" >
+          <div @click="collect(item,index,$event)" class="mine-item topTobottom" v-bind:style="item.style" v-bind:class="Math.random()>0.5?'topTobottom-1':'topTobottom'">
+            <i class="operation mine"></i><p>{{item.currencyName}}</br> +{{item.amount}}</p>
+          </div>
+        </div>
+
+        <div class="mine-item topTobottom-1 mine-item-loading">
+          <i class="operation loading"></i><p>正在挖宝中</p>
+        </div>
+      </div>
+      <div id="foot" class="foot">
+        <ul class="foot-ul">
+          <li><i @click="goWallet" class="operation operation-icon-1"></i><p>钱包</p></li>
+          <li><i @click="goTask" class="operation operation-icon-2"></i><p>提升算力</p></li>
+          <li><i @click="goInviting" class="operation operation-icon-3"></i><p>邀请好友</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

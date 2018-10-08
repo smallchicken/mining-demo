@@ -1,0 +1,174 @@
+/* 动画 */
+@keyframes topTobottom
+{
+0%   {transform:translate(0,0)}
+50%  {transform:translate(0,6px)}
+100% {transform:translate(0,0)}
+}
+
+@-moz-keyframes topTobottom /* Firefox */
+{
+  0%   {transform:translate(0,0)}
+  50%  {transform:translate(0,6px)}
+  100% {transform:translate(0,0)}
+}
+
+@-webkit-keyframes topTobottom /* Safari 和 Chrome */
+{
+  0%   {transform:translate(0,0)}
+  50%  {transform:translate(0,6px)}
+  100% {transform:translate(0,0)}
+}
+
+@-o-keyframes topTobottom /* Opera */
+{
+  0%   {transform:translate(0,0)}
+  50%  {transform:translate(0,6px)}
+  100% {transform:translate(0,0)}
+}
+
+@keyframes toHide
+{
+  from {}
+  to {left:1rem;bottom:1rem}
+}
+html,body{
+  margin: 0;
+  padding: 0;
+}
+ul,li{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+p{
+  margin: 0;
+}
+.hide{
+  visibility: hidden;
+}
+.container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: url('images/back.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.text-center{
+  text-align: center;
+}
+.force{
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  background: #0c2778;
+  border: 1px solid #4c7cca;
+  font-size: 1.4rem;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 8rem;
+}
+.coin{
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.2rem;
+  background: url('images/coin.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: -0.11rem;
+}
+.content{
+  /* position: relative; */
+  height: calc(100% - 20rem);
+}
+.mine-item{
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  z-index: 3;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+}
+.topTobottom{
+  animation-name: topTobottom;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.topTobottom-1{
+  animation-name: topTobottom;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay:1s;
+  animation-iteration-count: infinite;
+}
+.toHide{
+  animation: toHide;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.mine-item-loading{
+  left: 50%;
+  top: 50%;
+  margin-left: -3rem;
+  margin-top: -4rem;
+  z-index: 1;
+}
+.mine-item > p {
+  font-size: 1.4rem;
+  /* width: 4.3rem;
+  overflow: hidden; */
+}
+.mine-item-loading > p{
+  width: auto;
+}
+.mine{
+  background: url('images/coin-1.png');
+}
+.loading{
+  background: url('images/coin-2.png');
+}
+.foot{
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+}
+.foot-ul li{
+  display: inline-block;
+  margin: 0 1rem;
+  text-align: center;
+  color: #fff;
+}
+.foot-ul li:last-child{
+  float: right;
+}
+.operation-icon-1{
+  background: url('images/icon-1.png');
+}
+.operation-icon-2{
+  background: url('images/icon-2.png');
+}
+.operation-icon-3{
+  background: url('images/icon-3.png');
+}
+.operation{
+  display: inline-block;
+  width: 4.3rem;
+  height: 4.3rem;
+  margin-bottom: 0.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.foot-ul li p{
+  font-size: 1.2rem;
+}
+.inline-block{
+  display: inline-block;
+}
